@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Order Receipt - MHFDR E-Creative" />
+    <meta name="author" content="MHFDR E-Creative Team" />
+    <title>Order Receipt - MHFDR E-Creative</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">MHFDR E-Creative</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Receipt Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="display-5 fw-bold">Order Confirmation</h1>
+          <p class="lead text-muted">Thank you for your order!</p>
+          <div id="orderDate" class="text-muted"></div>
+        </div>
+
+        <div class="card shadow mb-5">
+          <div class="card-header bg-success text-white">
+            <h5 class="m-0">Order Complete</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <h5>Shipping Information</h5>
+                <ul class="list-unstyled">
+                  <li><strong>Name:</strong> <span id="receiptName"></span></li>
+                  <li><strong>Email:</strong> <span id="receiptEmail"></span></li>
+                  <li><strong>Phone:</strong> <span id="receiptPhone"></span></li>
+                  <li><strong>Address:</strong> <span id="receiptAddress"></span></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Order Summary</h5>
+                <div class="d-flex justify-content-between">
+                  <span>Total Items:</span>
+                  <span id="receiptItemCount"></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Payment Method:</span>
+                  <span id="receiptPaymentMethod">Credit Card</span>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                  <strong>Total:</strong>
+                  <strong>$<span id="receiptTotal"></span></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow mb-5">
+          <div class="card-header">
+            <h5 class="m-0">Order Details</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th class="text-end">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody id="receiptItems">
+                  <!-- Items will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html" class="btn btn-lg btn-yellow px-5">Continue Shopping</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="py-3 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          &copy;Copyright 2025. MHFDR E-Creative 
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Receipt JS -->
+    <script src="js/receipt.js"></script>
+  </body>
+</html>
